@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jelajah Destinasi — Kosakata Arab Pariwisata</title>
+<meta name="description" content="Game edukatif kosakata bahasa Arab bertema pariwisata (السِّيَاحَةُ) untuk kelas XI.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+<a class="skip" href="#app">Lewati ke konten</a>
+<header class="top">
+  <button class="brand" data-act="home" aria-label="Beranda Jelajah Destinasi"><span aria-hidden="true">🧭</span> Jelajah Destinasi</button>
+  <nav aria-label="Menu utama">
+    <button class="btn sm" data-act="map">Peta</button>
+    <button class="btn sm" data-act="howto">Cara Bermain</button>
+    <button class="btn sm" data-act="settings">Pengaturan</button>
+    <span class="xp" id="xp" aria-label="Total XP"></span>
+  </nav>
+</header>
+<main id="app" tabindex="-1"><noscript><p class="warn">Game ini membutuhkan JavaScript yang aktif.</p></noscript></main>
+<div id="live" class="sr" role="status" aria-live="polite"></div>
+
+<dialog id="howto" aria-labelledby="howto-t">
+  <h2 id="howto-t">Cara Bermain</h2>
+  <ol>
+    <li>Tekan <b>Mulai Petualangan</b>, lalu pilih destinasi di peta.</li>
+    <li>Baca pengantar dan <b>pelajari kosakata</b> dengan kartu (sebelumnya/berikutnya).</li>
+    <li>Pilih misi: <b>Kuis Pilihan Ganda</b> atau <b>Mencocokkan Kosakata</b>.</li>
+    <li>Jawaban benar = <b>100 poin</b>. Menyelesaikan misi = <b>+50 poin</b> bonus. Tidak ada hukuman dan tidak ada batas waktu.</li>
+    <li>Bintang: <b>3★</b> akurasi 90–100%, <b>2★</b> 75–89%, <b>1★</b> 60–74%. Akurasi ≥ 60% membuka destinasi berikutnya.</li>
+    <li>Boleh mengulang sebanyak yang kamu mau; skor terbaikmu tetap tersimpan.</li>
+  </ol>
+  <button class="btn primary" data-act="close">Mengerti</button>
+</dialog>
+<dialog id="settings" aria-labelledby="set-t">
+  <h2 id="set-t">Pengaturan</h2>
+  <p>Progres disimpan di peramban (localStorage) pada perangkat ini saja, tidak dikirim ke mana pun, dan tidak berpindah antarperangkat atau pengguna. Tidak ada data pribadi yang dikumpulkan.</p>
+  <div class="row"><button class="btn danger" data-act="resetask">Hapus Semua Progres…</button><button class="btn" data-act="close">Tutup</button></div>
+</dialog>
+<dialog id="confirm" aria-labelledby="conf-t" role="alertdialog">
+  <h2 id="conf-t">Hapus semua progres?</h2>
+  <p>Skor, bintang, XP, dan destinasi yang terbuka akan dihapus dan tidak bisa dikembalikan.</p>
+  <div class="row"><button class="btn" data-act="close">Batal</button><button class="btn danger" data-act="resetdo">Ya, hapus progres</button></div>
+</dialog>
+
+<script src="assets/js/data.js"></script>
+<script src="assets/js/game.js"></script>
+<script src="assets/js/storage.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>
